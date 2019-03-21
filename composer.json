@@ -1,6 +1,6 @@
 {
-    "name": "submtd/laravel-tracking-pixel",
-    "description": "Drop a cookie with affiliate info and then redirect",
+    "name": "submtd/laravel-tracking-cookie",
+    "description": "Drop a cookie with query parameters",
     "authors": [
         {
             "name": "Steve Harmeyer",
@@ -10,13 +10,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Submtd\\LaravelTrackingPixel\\": "src/"
+            "Submtd\\LaravelTrackingCookie\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Submtd\\LaravelTrackingPixel\\Providers\\LaravelTrackingPixelServiceProvider"
+                "Submtd\\LaravelTrackingCookie\\Providers\\LaravelTrackingCookieServiceProvider"
             ]
         }
     }
