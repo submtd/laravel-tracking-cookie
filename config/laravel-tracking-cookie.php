@@ -2,5 +2,5 @@
 
 return [
     'trackingCookieName' => 'tracking',
-    'trackingCookieLifetime' => 43200 // 30 days
+    'trackingCookieLifetime' => 2592000 // 30 days
 ];

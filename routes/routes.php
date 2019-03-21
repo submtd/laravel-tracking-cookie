@@ -1,17 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Log;
-
-Route::get('track/{image}', function ($image) {
-    if (!$value = request()->cookie(config('laravel-tracking-cookie.trackingCookieName', 'tracking'))) {
+Route::get('track/{path}', function ($path) {
+    if (!$value = \Submtd\LaravelTrackingCookie\Facades\TrackingCookie::getCokie(config('laravel-tracking-cookie.trackingCookieName', 'tracking'))) {
         $value = json_encode(request()->all());
     }
-    Log::error($value);
-    return response()
-        ->file($image)
-        ->cookie(
-            config('laravel-tracking-cookie.trackingCookieName', 'tracking'),
-            $value,
-            config('laravel-tracking-cookie.trackingCookieLifetime', 43200)
-        );
-})->where('image', '.*');
+    \Illuminate\Support\Facades\Log::error($value);
+    \Submtd\LaravelTrackingCookie\Facades\TrackingCookie::setCookie($value);
+    return response()->redirectTo($path);
+})->where('path', '.*');
