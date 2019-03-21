@@ -1,2 +1,2 @@
 # laravel-tracking-cookie
-Drop a cookie with query parameters
+Stores and reads tracking cookies

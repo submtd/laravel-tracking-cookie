@@ -1,6 +1,6 @@
 {
     "name": "submtd/laravel-tracking-cookie",
-    "description": "Drop a cookie with query parameters",
+    "description": "Stores and reads tracking cookies",
     "authors": [
         {
             "name": "Steve Harmeyer",

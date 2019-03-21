@@ -4,6 +4,7 @@ namespace Submtd\LaravelTrackingCookie\Services;
 
 class LaravelTrackingCookieService
 {
+    // sets a cookie
     public function setCookie($data, $name = null, $expires = null)
     {
         setcookie(
@@ -13,6 +14,7 @@ class LaravelTrackingCookieService
         );
     }
 
+    // retrieves a cookie
     public function getCookie($name = null)
     {
         if (!isset($_COOKIE[$name ?? config('laravel-tracking-cookie.trackingCookieName', 'tracking')])) {
