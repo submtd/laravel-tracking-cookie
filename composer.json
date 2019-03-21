@@ -1,0 +1,23 @@
+{
+    "name": "submtd/laravel-tracking-pixel",
+    "description": "Drop a cookie with affiliate info and then redirect",
+    "authors": [
+        {
+            "name": "Steve Harmeyer",
+            "email": "harmeyersteve@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Submtd\\LaravelTrackingPixel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Submtd\\LaravelTrackingPixel\\Providers\\LaravelTrackingPixelServiceProvider"
+            ]
+        }
+    }
+}
